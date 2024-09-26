@@ -1,4 +1,4 @@
-#Blog Automation with GPT-4
+Blog Automation with GPT-4
 
 This project automates the generation and publishing of blog posts using OpenAI's GPT-4, integrated with Medium via the Medium API. It also leverages Selenium for web scraping and interaction with online platforms, hosted on an AWS EC2 instance for continuous operation.
 Features
