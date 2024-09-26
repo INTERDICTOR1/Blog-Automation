@@ -1,0 +1,65 @@
+
+Blog Automation Project Report
+
+Project Overview:
+-----------------
+This project automates the process of generating and publishing blog posts on Medium using a combination of:
+- OpenAI GPT-4 for content generation.
+- DALL·E or other image generators for creating blog images.
+- Selenium for automating the browser to log in and post to Medium.
+- MySQL for optional data management.
+- Hosted on an AWS EC2 Ubuntu 24.04 LTS instance.
+
+Current Progress:
+-----------------
+1. AWS EC2 Instance Setup:
+- Launched Ubuntu Server 24.04 LTS on a t2.micro instance in AWS EC2.
+- Instance State: The instance is currently stopped.
+- SSH Access was established using a key pair (MediumKeyPair.pem).
+- MySQL was installed and configured on the instance, but is optional at this stage.
+
+2. Python Environment Setup:
+- Created a Python virtual environment (myenv) to manage dependencies:
+  ```
+  python3 -m venv myenv
+  ```
+- Installed necessary Python packages:
+  - selenium (for browser automation).
+  - openai (for GPT-4 API integration).
+  - mysql-connector-python (for MySQL integration).
+
+3. Python Script (automate_blog.py):
+- The script automates the following:
+  - Content generation using GPT-4 (pending API key).
+  - Blog posting on Medium via Selenium.
+  - Image generation (planned but not yet implemented).
+  
+- Pending Task: Obtain an OpenAI API key and update the script:
+  ```
+  openai.api_key = 'your-real-api-key'
+  ```
+
+4. Browser Automation (Chrome & ChromeDriver):
+- Installed Google Chrome and ChromeDriver, but encountered version mismatch errors:
+  - ChromeDriver version 114.0 and Chrome version 128.0 are incompatible.
+  
+- Next Step: Fix the version mismatch by either downgrading Chrome or upgrading ChromeDriver.
+
+5. Automation Setup (cron jobs):
+- Cron job setup is planned to run the script at regular intervals but has not been configured yet.
+
+Errors & Roadblocks:
+---------------------
+1. MySQL Connector Error: Resolved by installing mysql-connector-python.
+2. ChromeDriver Version Mismatch: ChromeDriver version 114.0 not compatible with Chrome version 128.0.
+3. OpenAI API Key: The GPT-4 subscription doesn't provide API access; you need to sign up for an OpenAI API account.
+
+Next Steps:
+------------
+1. Restart the EC2 instance and reconnect via SSH.
+2. Fix ChromeDriver version mismatch by downgrading Chrome or upgrading ChromeDriver.
+3. Obtain OpenAI API Key and integrate it into the script.
+4. Test the Python script to ensure it generates and publishes blogs correctly.
+5. Set up a cron job to run the script at regular intervals.
+6. Optionally, configure MySQL for logging data or storing blog-related information.
+
