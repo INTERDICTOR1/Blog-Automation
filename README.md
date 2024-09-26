@@ -39,32 +39,34 @@ Prerequisites
 
 Installation
 
-    Clone the repository:
+1. Clone the repository:
 
-    bash
-
-git clone https://github.com/yourusername/blog-automation.git
-cd blog-automation
+```
+    git clone https://github.com/yourusername/blog-automation.git
+    cd blog-automation
+```
 
 Create a virtual environment:
 
-bash
-
-python3 -m venv venv
-source venv/bin/activate  # On Windows use venv\Scripts\activate
+```
+    python3 -m venv venv
+    source venv/bin/activate  # On Windows use venv\Scripts\activate
+```
 
 Install the required dependencies:
 
-bash
+```
 
-pip install -r requirements.txt
+    pip install -r requirements.txt
+```
 
 Set up environment variables: Create a .env file and add your API keys and other sensitive information.
 
-env
+```
 
 OPENAI_API_KEY=your_openai_api_key
 MEDIUM_API_TOKEN=your_medium_api_token
+```
 
 Configure Selenium: Ensure that the Chrome browser and ChromeDriver versions match. Use this command to install ChromeDriver:
 
@@ -78,15 +80,15 @@ Usage
 
 To run the automation:
 
-    Start your virtual environment:
+Start your virtual environment:
 
-    bash
+    
 
+```
 source venv/bin/activate
-
+```
 Run the main script:
 
-bash
 
     python automate_blogs.py
 
@@ -97,6 +99,4 @@ Troubleshooting
     OpenAI API: Verify that your API key is correct and has sufficient quota.
     EC2 Setup: Make sure all ports are open for accessing Medium's API, and the instance has internet access.
 
-License
 
-This project is licensed under the MIT License.
